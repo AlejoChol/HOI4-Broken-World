@@ -1,0 +1,601 @@
+GER = {
+	light_tank_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_aa_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+	
+	
+	medium_tank_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+	
+	heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	modern_tank_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	modern_tank_aa_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+}
+
+ITA = {
+
+	light_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_light_tank_destroyer_1.dds" 
+
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+				
+				"gfx/interface/technologies/ita_light_tank_destroyer_1.dds" 
+			}
+		}
+	}
+
+	
+
+	light_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_light_tank_destroyer_2.dds" 
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+				
+				"gfx/interface/technologies/ita_light_tank_destroyer_2.dds" 
+				
+			}
+		}
+	}
+
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_destroyer_2.dds" 
+				"gfx/interface/technologies/ita_medium_tank_artillery_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_artillery_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_destroyer_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_destroyer_3.dds" 
+				"gfx/interface/technologies/ita_medium_tank_artillery_3.dds"
+				"gfx/interface/technologies/ita_medium_tank_aa_3.dds" 				 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_artillery_3.dds"				 
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_destroyer_3.dds" 		 
+			}
+		}
+	}
+
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_medium_tank_aa_3.dds" 		 
+			}
+		}
+	}
+
+	heavy_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_heavy_tank_artillery_2.dds"
+			}
+		}
+	}
+
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/ita_heavy_tank_artillery_2.dds"	
+			}
+		}
+	}
+}
+
+JAP = {
+	light_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_aa_2.dds" 
+
+			}
+		}
+	}
+
+	light_tank_aa_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_aa_2.dds" 
+			}
+		}
+	}
+
+	light_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_destroyer_3.dds" 
+				"gfx/interface/technologies/jap_light_tank_artillery_3.dds" 
+				"gfx/interface/technologies/jap_light_tank_aa_3.dds" 
+			}
+		}
+	}
+
+	light_tank_artillery_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_artillery_3.dds" 
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_destroyer_3.dds" 
+			}
+		}
+	}
+
+	light_tank_aa_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_light_tank_aa_3.dds" 
+			}
+		}
+	}
+
+	medium_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_1.dds" 
+				"gfx/interface/technologies/jap_medium_tank_destroyer_1.dds" 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_1.dds" 
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_destroyer_1.dds" 
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_2.dds" 
+				"gfx/interface/technologies/jap_medium_tank_destroyer_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_destroyer_2.dds" 
+			}
+		}
+	}
+
+	medium_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_3.dds" 
+				"gfx/interface/technologies/jap_medium_tank_destroyer_3.dds" 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_artillery_3.dds" 
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/jap_medium_tank_destroyer_3.dds" 
+			}
+		}
+	}
+
+	heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_artillery_1.dds"
+		 		"gfx/interface/technologies/jap_heavy_tank_destroyer_1.dds"
+			}
+		}
+	}
+
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_artillery_1.dds"
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_destroyer_1.dds"
+			}
+		}
+	}
+
+	heavy_tank_chassis_2 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_artillery_2.dds"
+		 		"gfx/interface/technologies/jap_heavy_tank_destroyer_2.dds"
+			}
+		}
+	}
+
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_artillery_2.dds"
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+		 		"gfx/interface/technologies/jap_heavy_tank_destroyer_2.dds"
+			}
+		}
+	}
+
+}
+
+FRA = {
+	
+	light_tank_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis_3 = {
+		pool = {
+			icons = { 
+			}
+		}
+	}
+
+	light_tank_artillery_chassis_3 = {
+		pool = {
+			icons = {
+			}
+		}
+	}
+
+	medium_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_basic_medium_tank_artillery.dds" 
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_basic_medium_tank_artillery.dds" 
+			}
+		}
+	}
+
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_improved_medium_tank_destroyer.dds" 	 
+				"gfx/interface/technologies/FRA_improved_medium_tank_artillery.dds" 	 
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_improved_medium_tank_destroyer.dds" 	 	 
+			}
+		}
+	}
+	medium_tank_artillery_chassis_2 = {
+		pool = {
+			icons = {	 
+				"gfx/interface/technologies/FRA_improved_medium_tank_artillery.dds" 	 
+			}
+		}
+	}
+
+	heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_basic_heavy_tank_artillery.dds" 
+ 
+			}
+		}
+	}
+
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/technologies/FRA_basic_heavy_tank_artillery.dds" 
+ 
+			}
+		}
+	}
+	
+}
+

@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_category_icon_revisited"
+		texturefile = "gfx/interface/decisions/category_icon_revisited.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_icon_revisited"
+		texturefile = "gfx/interface/decisions/decision_icon_revisited.dds"
+	}
+}

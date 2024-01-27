@@ -1,0 +1,18 @@
+﻿l_english:
+
+NWFAJG_RULE_OPTION_ALLOWED:0 "§GAllowed§!"
+NWFAJG_RULE_OPTION_BLOCKED:0 "§RBlocked§!"
+
+RULE_GROUP_FACTION:0 "§YFACTION SETTING§! §G+§!§RPLUS§!"
+
+RULE_BLOCKED_AI_TOOLTIP:0 "§RNice try, BOT.§!"
+RULE_ALLOW_JOIN_FACTION_BLOCKED_TOOLTIP:0 "§GGame Rule:§! §RCan only join factions through events, focuses and decisions.§!"
+RULE_ALLOW_CREATE_FACTION_BLOCKED_TOOLTIP:0 "§GGame Rule:§! §RCan only create factions through events, focuses and decisions.§!"
+
+RULE_ALLOW_JOIN_FACTION:0 "Join Faction"
+RULE_ALLOW_JOIN_FACTION_FREE_DESC:0 "§GCountries can join factions freely.§!"
+RULE_ALLOW_JOIN_FACTION_LIMITED_DESC:0 "§RCountries won't be able to join factions no matter what happens to the world.§!\n§YNote: Countries can still join factions through events, focuses and decisions.§!"
+
+RULE_ALLOW_CREATE_FACTION:0 "Faction Creation"
+RULE_ALLOW_CREATE_FACTION_FREE_DESC:0 "§GCountries are allowed to create new factions freely.§!"
+RULE_ALLOW_CREATE_FACTION_LIMITED_DESC:0 "§RCountries won't be able to create new factions.§!\n§YNote: Countries can still create factions through events, focuses and decisions.§!"

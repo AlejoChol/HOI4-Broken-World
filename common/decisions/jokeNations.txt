@@ -1,0 +1,451 @@
+joke_formable_nations_mod_category = {
+	formable_nations_kfp = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = AUS
+				original_tag = GER
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					4 = { is_controlled_by = ROOT }
+					152 = { is_controlled_by = ROOT }
+					153 = { is_controlled_by = ROOT }
+					848 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = KFP_formable } } }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = KFP_formable
+			add_stability = 0.2
+			set_capital = { state = 4 }
+			custom_effect_tooltip = core_land
+			hidden_effect = {
+				4 = { add_core_of = ROOT }
+				152 = { add_core_of = ROOT }
+				153 = { add_core_of = ROOT }
+				848 = { add_core_of = ROOT }
+			}
+		}
+	}
+
+	formable_nations_lesser_hungary = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = HUN
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = lesser_hungary_formable } } }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = lesser_hungary_formable
+			add_stability = 0.2
+			set_capital = { state = 43 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				every_state = {
+					remove_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	formable_nations_long_chile = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = CHL
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					all_state = {
+						limit = {
+							is_coastal = yes
+						}
+						is_controlled_by = ROOT
+					}
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = long_chile_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = long_chile_formable
+			add_stability = 0.2
+			set_capital = { state =  }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				every_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	formable_nations_greater_switzerland = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = SWI
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					all_state = {
+						limit = {
+							is_coastal = no
+						}
+						is_controlled_by = ROOT
+					}
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = greater_switzerland_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = greater_switzerland_formable
+			add_stability = 0.2
+			set_capital = { state =  }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				every_state = {
+					limit = {
+						is_coastal = no
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	formable_nations_new_vegas = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = USA
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					379 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = new_vegas_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = new_vegas_formable
+			add_stability = 0.2
+			set_capital = { state = 379 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				379 = { add_core_of = ROOT }
+			}
+		}
+	}
+
+	formable_nations_new_california_republic = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = USA
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					378 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = ncr_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = ncr_formable
+			add_stability = 0.2
+			set_capital = { state = 378 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				378 = { add_core_of = ROOT }
+				379 = { add_claim_by = ROOT }
+			}
+		}
+	}
+
+	formable_nations_caesars_legion = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = USA
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					380 = { is_controlled_by = ROOT }
+					382 = { is_controlled_by = ROOT }
+					376 = { is_controlled_by = ROOT }
+					377 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = caesars_legion_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = caesars_legion_formable
+			add_stability = 0.2
+			set_capital = { state = 377 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				380 = { add_core_of = ROOT }
+				382 = { add_core_of = ROOT }
+				376 = { add_core_of = ROOT }
+				377 = { add_core_of = ROOT }
+			}
+		}
+	}
+
+	formable_nations_femboyvaria = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					52 = { is_controlled_by = ROOT }
+					53 = { is_controlled_by = ROOT }
+					54 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = femboyvaria_formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = femboyvaria_formable
+			add_stability = 0.2
+			set_capital = { state = 52 }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				52 = { add_core_of = ROOT }
+				53 = { add_core_of = ROOT }
+				54 = { add_core_of = ROOT }
+			}
+		}
+	}
+	
+	formable_nations_hololive = {
+		ai_will_do = {
+			factor = 0
+		}
+		
+		cost = 0  days_re_enable = 0
+		
+		visible = {
+			NOT = { has_country_flag = unform_available }
+			NOT = { has_global_flag = hide_formable_nations }
+			has_global_flag = joke_formables_allowed
+			OR = {
+				has_global_flag = no_limit
+				original_tag = JAP
+			}
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = { is_subject = no has_global_flag = puppets_allowed }
+					 = { is_controlled_by = ROOT }
+				}
+				AND = {
+					is_ai = no
+					has_global_flag = debug_mode
+				}
+			}
+			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = _formable } } }
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = _formable
+			add_stability = 0.2
+			set_capital = { state =  }
+			custom_effect_tooltip = core_land
+			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
+				 = { add_core_of = ROOT }
+			}
+		}
+	}
+}
+
+
+
+formable_nations_ = {
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_global_flag = ai_disabled
+		}
+	}
+	
+	cost = 0  days_re_enable = 0
+	
+	visible = {
+		NOT = { has_country_flag = unform_available }
+		NOT = { has_global_flag = hide_formable_nations }
+		OR = {
+			has_global_flag = no_limit
+			original_tag = 
+		}
+	}
+	available = {
+		OR = {
+			AND = {
+				OR = { is_subject = no has_global_flag = puppets_allowed }
+				 = { is_controlled_by = ROOT }
+			}
+			AND = {
+				is_ai = no
+				has_global_flag = debug_mode
+			}
+		}
+		custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = _formable } } }
+	}
+
+	complete_effect = {
+		set_cosmetic_tag = _formable
+		add_stability = 0.2
+		set_capital = { state =  }
+		custom_effect_tooltip = core_land
+		hidden_effect = {
+			 = { add_core_of = ROOT }
+		}
+	}
+}

@@ -1,0 +1,99 @@
+﻿USA = {
+	
+	naval_helicopter_equipment = {
+		prefix = ""
+		generic = { "Helicopter Combat Support Squadron" "HC" }
+		generic_pattern = AIR_WING_NAME_USA_CARRIER
+		unique = {
+		}	
+	} 
+	
+	naval_helicopter = {
+		prefix = ""
+		generic = { "Helicopter Combat Support Squadron" "HC" }
+		generic_pattern = AIR_WING_NAME_USA_CARRIER
+		unique = {
+		}
+	}
+	
+	fleet_oiler = {
+		prefix = "USS"
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {			
+			"Mattole" "Laramie" "Cimarron"  "Neosho" "Platte" "Sabine" "Salamonie" "Kaskaskia" "Sangamon" "Santee" "Chemung" "Chenango" "Guadalupe" "Suwannee" "Ashtabula" "Cacapon" "Caliente" "Chikaskia" "Elokomin" "Aucilla"
+			"Marias" "Manatee" "Mississinewa" "Nantahala" "Severn" "Taluga" "Chipola" "Tolovana" "Allagash" "Caloosahatchee" "Canisteo" "Chukawan" "Mispillion" "Navasota" "Passumpsic" "Pawcatuck" "Waccamaw" "Chicopee" "Housatonic"
+			"Kennebec" "Merrimack" "Winooski" "Kankakee" "Lackawanna" "Mattaponi" "Monongahela" "Tappahannock" "Patuxent" "Neches" "Chiwawa" "Enoree" "Escalante" "Neshanic" "Niobrara" "Suamico" "Tallulah" "Pecos" "Cache" "Millicoma"
+			"Saranac" "Saugatuck" "Schuylkill" "Cossatot" "Chepachet" "Cowanesque" "Escambia" "Kennebago" "Cahaba" "Mascoma" "Ocklawaha" "Pamanset" "Ponaganset" "Sebec" "Tomahawk" "Pasig" "Abatan" "Soubarissen" "Anacostia" "Caney"
+			"Tamalpais" "Cohocton" "Concho" "Conecuh" "Contoocook" "Mississinewa" "Hassayampa" "Kawishiwi" "Truckee" "Ponchatoula"
+		}
+	}	
+}
+generic = {
+	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {}
+	}
+}
+GER = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Dithmarschen" "Altmark" "Northmark" "Franken" "Ermland" "Lothringen" "Lüneburg" "Coburg" "Freibug" "Glücksburg" "Saarburg" "Nienburg" "Offenburg" "Meersburg" "Westerwald" "Odenwald" "Rhön" "Spessart" "Elbe" 
+			"Mosel" "Rhein" "Werra" "Main" "Donau" "Berlin" "Frankurt am Main" "Bonn"
+		}
+	}
+}
+SOV = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Alazan" "Tartu" "Goryn" "Khobi" "Sosya" "Orsha" "Titan" "Tunguska" "Sunta"  "Linda" "Indiga" "Moksha" "Sysola" "Cheremshan" "Lovat" "Shacha" "Seyma" "Shelon" "Terek" "Sheksna" "Don" "Donets" "Dnepr" "Dunay" "Koyda" "Lena" "Vishera"
+			"Kola" "Yel'nya" "Yergorlik" "Izhora" "Prut" "Ilim"
+		}
+	}
+}
+ENG = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Olcades" "Oligarch" "Olynthus" "Olwen" "Olna" "Oleander" "Abbeydale" "Aldersdale" "Arndale" "Bishopdale" "Boardale" "Broomdale" "Cairndale" "Cedardale" "Dewdale" "Darkdale" "Derwentdale" "Dingledale" "Dinsdale" "Denbydale" 
+			"Eaglesdale" "Easedale" "Ennerdale" "Echodale" "Airsprite" "Nasprite" "Gold Ranger" "Green Ranger" "Grey Ranger" "Black Ranger" "Blue Ranger" "Brown Ranger" "Wave Baron" "Wave Chief" "Wave Emperor" "Wave Governor" "Wave Liberator"
+			"Wave Protector" "Wave Regent" "Wave Ruler" "Wave Sovereign" "Wave Victor" "Wave King" "Wave Monarch" "Wave Duke" "Wave Knight" "Wave Laird" "Wave Prince" "Wave Protector" "Wave Master" "Wave Commander" "Wave Conqueror" "Northmark"
+			"Surf Patrol" "Surf Pioneer" "Eddybeach" "Eddybay" "Eddycliff" "Eddycreek" "Eddyrock" "Eddyreef" "Eddyfirth" "Eddyness" "Tidereach" "Tideflow" "Tidesurge" "Tide Austral" "Appleleaf" "Bayleaf" "Brambleleaf" "Orangeleaf" "Plumleaf"
+			"Pearleaf" "Tidespring" "Tidepool"
+		}
+	}
+}
+JAP = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Kazahaya" "Karasaki" "Hayasui" "Inatori" "Kariko" "Tsurikake" "Kumomi" "Kamisu" "Kōshū" "Seitō" "Noma" "Hario" "Inatori" "Karasaki" "Tatsumai" "Hamana" "Sagami" "Towada" "Tokiwa" "Mashū" "Ōmi"
+			"Kinesaki" "Hayasaki" "Shirasaki" "Arasaki" "Kiyosaki" "Ōsaki" "Hesaki" "Kashizaki" "Kuresaki" "Misaki" "Fujisaki" "Irako" "Mamiya" "Nosaki" "Kurasaki" "Sōya" "Kashino" "Komahasi" "Taigei" "Jingei" "Chōgei"
+		}
+	}
+}
+FRA = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Durance" "Meuse" "Var" "Marne" "Somme" "Émile Bertin" "Gustave Zédé"
+		}
+	}
+}
+ITA = {	
+	fleet_oiler = {
+		prefix = ""
+		generic = { "Fleet Replenishment Oiler" }
+		unique = {
+			"Stromboli" "Vesuvio" "Bormida" "Favignana" "Linosa" "Panarea" "Salina" "Etna"
+		}
+	}
+}

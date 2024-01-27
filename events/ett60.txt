@@ -1,0 +1,43 @@
+﻿add_namespace = ett60
+
+#Welcome event
+country_event = {
+	id = ett60.1
+	
+	title = ett60.1.t
+	desc = ett60.1.d
+	picture = GFX_report_event_ett60
+	
+	fire_only_once = yes
+	
+	#hidden = no
+	
+	
+	is_triggered_only = yes
+	
+	#
+	option = {
+		name = ett60.1.a
+		set_global_flag = ett60_event_happened	
+		hidden_effect = { 
+			ITA = {
+				load_oob = "ITA_replenishment_fleet"
+			}
+			JAP = {
+				load_oob = "JAP_replenishment_fleet"
+			}
+			ENG = {
+				load_oob = "ENG_replenishment_fleet"
+			}
+			GER = {
+				load_oob = "GER_replenishment_fleet"
+			}
+			USA = {
+				load_oob = "USA_replenishment_fleet"
+			}
+			SOV = {
+				load_oob = "SOV_replenishment_fleet"
+			}
+		}						
+	}		
+}

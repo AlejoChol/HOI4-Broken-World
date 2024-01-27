@@ -1,0 +1,4 @@
+### Credits to Peahead for writing the code in his original mod (Coolzero319)
+nation_renaming_revisited_category = {
+	icon = GFX_category_icon_revisited
+}

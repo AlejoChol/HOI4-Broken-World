@@ -1,0 +1,18 @@
+add_namespace = ett60tech
+
+country_event = {
+	id = ett60tech.1
+	
+	title = ett60tech.1.t
+	desc = ett60tech.1.d
+	picture = GFX_report_event_refueling
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ett60tech.1.a
+	}
+}
+	

@@ -1,0 +1,18 @@
+﻿l_russian:
+
+NWFAJG_RULE_OPTION_ALLOWED:0 "§GРазрешено§!"
+NWFAJG_RULE_OPTION_BLOCKED:0 "§RЗаблокировано§!"
+
+RULE_GROUP_FACTION:0 "§YНАСТРОЙКА АЛЬЯНСОВ§! §G+§!§RПЛЮС§!"
+
+RULE_BLOCKED_AI_TOOLTIP:0 "§RХорошая попытка, БОТ.§!"
+RULE_ALLOW_JOIN_FACTION_BLOCKED_TOOLTIP:0 "§YПравило Игры:§! §RПрисоединение к Альянсам возможно только через события, фокусы и решения.§!"
+RULE_ALLOW_CREATE_FACTION_BLOCKED_TOOLTIP:0 "§YПравило Игры:§! §RМожно создавать Альянсы только с помощью событий, фокусов и решений.§!"
+
+RULE_ALLOW_JOIN_FACTION:0 "Присоединение к Альянсам"
+RULE_ALLOW_JOIN_FACTION_FREE_DESC:0 "§GСтраны могут свободно вступать в Альянсы.§!"
+RULE_ALLOW_JOIN_FACTION_LIMITED_DESC:0 "§RСтраны не смогут присоединиться к Альянсам, что бы ни случилось в мире.§!\n§YПримечание: Страны по-прежнему могут присоединяться к Альянсам с помощью событий, фокусов и решений.§!"
+
+RULE_ALLOW_CREATE_FACTION:0 "Создание Альянса"
+RULE_ALLOW_CREATE_FACTION_FREE_DESC:0 "§GСтранам разрешено свободно создавать новые Альянсы.§!"
+RULE_ALLOW_CREATE_FACTION_LIMITED_DESC:0 "§RСтраны не смогут создавать новые Альянсы.§!\n§YПримечание: Страны все еще могут создавать Альянсы с помощью событий, фокусов и решений.§!"

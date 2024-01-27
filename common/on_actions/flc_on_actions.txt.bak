@@ -1,0 +1,38 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			for_each_scope_loop = {
+				array = global.FLC_countries
+				
+				if = {
+					limit = {
+						NOT = { num_of_civilian_factories > 200 } # civs <= 200
+					}
+					clear_variable = FLC_penalty
+					remove_dynamic_modifier = { modifier = FLC_modifier }
+				}
+			}
+			clear_array = global.FLC_countries
+
+			for_each_scope_loop = { # i could make it affect every country, but we're mostly worried about the majors snowballing, and this saves performance
+				array = global.majors
+				
+				if = {
+					limit = { num_of_civilian_factories > 200 }
+
+					set_variable = { FLC_penalty = num_of_civilian_factories }
+					subtract_from_variable = { FLC_penalty = 200 }
+					divide_variable = { FLC_penalty = 200 } # 1 civ -> 0.5% factor
+					clamp_variable = {
+						var = FLC_penalty
+						max = 0.3
+					}
+
+					add_dynamic_modifier = { modifier = FLC_modifier }
+
+					add_to_array = { array = global.FLC_countries } # used to later check for countries affected by the modifier
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,895 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "Man the Guns" 
+	}
+	
+	ship_conning_tower_1 = {
+		abbreviation = "cot"
+		category = ship_conning_tower
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			naval_light_gun_hit_chance_factor = 0.02
+			naval_heavy_gun_hit_chance_factor = 0.02
+			surface_detection = 2
+			build_cost_ic = 150	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		
+		can_convert_from = {
+			module_category = ship_conning_tower
+			convert_cost_ic = 100
+		}
+	}
+	
+	ship_conning_tower_2 = {
+		abbreviation = "cot2"
+		category = ship_conning_tower
+		parent = ship_conning_tower_1
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			naval_light_gun_hit_chance_factor = 0.03
+			naval_heavy_gun_hit_chance_factor = 0.03
+			surface_detection = 4
+			reliability = 0.025
+			build_cost_ic = 200	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		
+		can_convert_from = {
+			module_category = ship_conning_tower
+			convert_cost_ic = 150
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	ship_conning_tower_3 = {
+		abbreviation = "cot3"
+		category = ship_conning_tower
+		parent = ship_conning_tower_2
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			naval_light_gun_hit_chance_factor = 0.05
+			naval_heavy_gun_hit_chance_factor = 0.05
+			surface_detection = 6
+			reliability = 0.05
+			build_cost_ic = 300	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+		}
+		
+		can_convert_from = {
+			module_category = ship_conning_tower
+			convert_cost_ic = 200
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	ship_conning_tower_4 = {
+		abbreviation = "cot4"
+		category = ship_conning_tower
+		parent = ship_conning_tower_2
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			naval_light_gun_hit_chance_factor = 0.075
+			naval_heavy_gun_hit_chance_factor = 0.075
+			surface_detection = 8
+			reliability = 0.075
+			build_cost_ic = 550	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+		}
+		
+		can_convert_from = {
+			module_category = ship_conning_tower
+			convert_cost_ic = 425
+		}
+		build_cost_resources = {
+			aluminium = 1
+		}
+	}
+	torpedo_protection_1 = {
+		abbreviation = "tp1"
+		category = torpedo_protection
+		
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		add_stats = {
+			build_cost_ic = 150
+			naval_torpedo_enemy_critical_chance_factor = -0.05
+			naval_torpedo_damage_reduction_factor = 0.05
+		}
+		
+		dismantle_cost_ic = 150		
+	}
+	torpedo_protection_2 = {
+		abbreviation = "tp2"
+		category = torpedo_protection
+		
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		add_stats = {
+			build_cost_ic = 300
+			naval_torpedo_enemy_critical_chance_factor = -0.1
+			naval_torpedo_damage_reduction_factor = 0.1
+		}
+		
+		dismantle_cost_ic = 300		
+	}
+	torpedo_protection_3 = {
+		abbreviation = "tp3"
+		category = torpedo_protection
+		
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		add_stats = {
+			build_cost_ic = 450
+			naval_torpedo_enemy_critical_chance_factor = -0.15
+			naval_torpedo_damage_reduction_factor = 0.15
+		}
+		
+		build_cost_resources = {
+			steel = 1
+		}
+		dismantle_cost_ic = 450		
+	}
+	torpedo_protection_4 = {
+		abbreviation = "tp4"
+		category = torpedo_protection
+		
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		add_stats = {
+			build_cost_ic = 600
+			naval_torpedo_enemy_critical_chance_factor = -0.2
+			naval_torpedo_damage_reduction_factor = 0.2
+		}
+		
+		dismantle_cost_ic = 600		
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	steam_turbine = {
+		abbreviation = "stt"
+		category = ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+				
+		multiply_stats = {
+			fuel_consumption = 0.1
+			build_cost_ic = -0.05
+			#naval_speed = 0
+			naval_range = -0.1
+			surface_visibility = 0.2
+		}
+		
+		can_convert_from = {
+			module_category = ship_engine_type
+			convert_cost_ic = 500
+		}
+	}
+	
+	geared_steam_turbine = {
+		abbreviation = "gstt"
+		category = ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+				
+		multiply_stats = {
+			fuel_consumption = 0.05
+			#build_cost_ic = -0.5
+			naval_speed = 0.025
+			naval_range = -0.05
+			surface_visibility = 0.1
+		}
+		
+		can_convert_from = {
+			module_category = ship_engine_type
+			convert_cost_ic = 500
+		}
+	}
+	
+	diesel_engine = {
+		abbreviation = "die"
+		category = ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+				
+		multiply_stats = {
+			fuel_consumption = -0.1
+			build_cost_ic = 0.05
+			naval_speed = 0.05
+			naval_range = 0.1
+			#surface_visibility = 0.1
+		}
+		
+		can_convert_from = {
+			module_category = ship_engine_type
+			convert_cost_ic = 500
+		}
+	}
+	
+	gas_turbine = {
+		abbreviation = "gast"
+		category = ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+				
+		multiply_stats = {
+			fuel_consumption = 0.05
+			build_cost_ic = 0.15
+			naval_speed = 0.075
+			naval_range = 0.05
+			surface_visibility = -0.1
+		}
+		
+		can_convert_from = {
+			module_category = ship_engine_type
+			convert_cost_ic = 500
+		}
+	}
+	
+	turbo_electric_drive = {
+		abbreviation = "ted"
+		category = ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+				
+		multiply_stats = {
+			fuel_consumption = -0.15
+			build_cost_ic = 0.1
+			naval_speed = 0.1
+			naval_range = 0.15
+			surface_visibility = 0.1
+		}
+		
+		add_stats = {
+			naval_torpedo_enemy_critical_chance_factor = -0.05
+			naval_torpedo_damage_reduction_factor = 0.1
+		}
+		
+		can_convert_from = {
+			module_category = ship_engine_type
+			convert_cost_ic = 500
+		}
+	}
+	
+	submarine_firing_computer_1 = {
+		abbreviation = "sfc1"
+		category = submarine_firing_computer
+		sfx = sfx_ui_sd_module_engine
+				
+		add_stats = {
+			naval_torpedo_hit_chance_factor = 0.01
+		}
+	}
+	
+	submarine_firing_computer_2 = {
+		abbreviation = "sfc2"
+		category = submarine_firing_computer
+		sfx = sfx_ui_sd_module_engine
+				
+		add_stats = {
+			naval_torpedo_hit_chance_factor = 0.02
+			build_cost_ic = 10
+		}
+	}
+	
+	submarine_firing_computer_3 = {
+		abbreviation = "sfc3"
+		category = submarine_firing_computer
+		sfx = sfx_ui_sd_module_engine
+				
+		add_stats = {
+			naval_torpedo_hit_chance_factor = 0.03
+			build_cost_ic = 14
+		}
+	}
+	
+	submarine_firing_computer_4 = {
+		abbreviation = "sfc4"
+		category = submarine_firing_computer
+		sfx = sfx_ui_sd_module_engine
+				
+		add_stats = {
+			naval_torpedo_hit_chance_factor = 0.05
+			build_cost_ic = 20
+		}
+	}
+	
+	submarine_sonar_1 = {
+		abbreviation = "sso"
+		category = sub_sonar
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			surface_detection = 4
+			build_cost_ic = 12
+		}
+	}
+	
+	submarine_sonar_2 = {
+		abbreviation = "ss2"
+		category = sub_sonar
+		parent = submarine_sonar_1
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			surface_detection = 6
+			sub_detection = 15
+			build_cost_ic = 16
+		}
+	}
+	
+	submarine_sonar_3 = {
+		abbreviation = "ss3"
+		category = sub_sonar
+		parent = submarine_sonar_2
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			surface_detection = 9
+			sub_detection = 22
+			build_cost_ic = 20
+		}
+	}
+	
+	anechoic_tiles_1 = {
+		abbreviation = "at1"
+		category = sub_coating
+		sfx = sfx_ui_sd_module_sonar
+		
+		multiply_stats = {
+			sub_visibility = -0.15
+			build_cost_ic = 0.03
+		}
+		
+		build_cost_resources = {
+			rubber = 1
+		}
+	}
+	
+	anechoic_tiles_2 = {
+		abbreviation = "at1"
+		category = sub_coating
+		parent = anechoic_tiles_1
+		sfx = sfx_ui_sd_module_sonar
+				
+		multiply_stats = {
+			sub_visibility = -0.3
+			build_cost_ic = 0.06
+		}
+		
+		build_cost_resources = {
+			rubber = 1
+		}
+	}
+	
+	open_cycle_aip = {
+		abbreviation = "acip"
+		category = sub_engine_type
+		sfx = sfx_ui_sd_module_engine
+		
+		add_stats = {
+			build_cost_ic = 50
+		}	
+		
+		multiply_stats = {
+			reliability = -0.25			
+			sub_visibility = -0.1
+			fuel_consumption = -0.1
+		}
+		
+		can_convert_from = {
+			module_category = sub_engine_type
+			convert_cost_ic = 50
+		}
+	}
+	
+	closed_cycle_diesel_aip = {
+		abbreviation = "acip"
+		category = sub_engine_type
+		sfx = sfx_ui_sd_module_engine
+		
+		add_stats = {
+			build_cost_ic = 75
+		}	
+		
+		multiply_stats = {
+			reliability = -0.15
+			sub_visibility = -0.1
+			fuel_consumption = -0.1
+			naval_range = -0.5
+		}
+		
+		can_convert_from = {
+			module_category = sub_engine_type
+			convert_cost_ic = 75
+		}
+	}
+	
+	sub_ship_anti_air_1 = {
+		category = sub_ship_anti_air
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 10	
+			surface_visibility = 1
+		}
+		
+		multiply_stats = {
+			sub_visibility = 0.05
+			naval_speed = -0.005
+		}
+
+		can_convert_from = {
+			module_category = sub_ship_anti_air
+			convert_cost_ic = 10
+		}
+	}
+	
+	sub_ship_anti_air_2 = {
+		category = sub_ship_anti_air
+		sfx = sfx_ui_sd_module_turret
+		parent = sub_ship_anti_air_1
+		
+		add_stats = {
+			anti_air_attack = 2.5
+			build_cost_ic = 20
+			surface_visibility = 2
+		}
+		
+		multiply_stats = {
+			sub_visibility = 0.05
+			naval_speed = -0.005
+		}
+
+		can_convert_from = {
+			module_category = sub_ship_anti_air
+			convert_cost_ic = 20
+		}
+	}
+	
+	sub_ship_radar_1 = {
+		abbreviation = "sbj"
+		category = sub_ship_radar
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			build_cost_ic = 20
+			surface_detection = 5
+		}
+		
+		multiply_stats = {
+			sub_visibility = 0.15
+		}
+
+		can_convert_from = {
+			module_category = sub_ship_radar
+			convert_cost_ic = 20
+		}
+	}
+	
+	sub_ship_radar_2 = {
+		abbreviation = "sbk"
+		category = sub_ship_radar
+		sfx = sfx_ui_sd_module_sonar
+		parent = sub_ship_radar_1
+	
+		add_stats = {
+			build_cost_ic = 30
+			surface_detection = 7
+		}
+		
+		multiply_stats = {
+			sub_visibility = 0.15
+		}
+
+		can_convert_from = {
+			module_category = sub_ship_radar
+			convert_cost_ic = 30
+		}
+	}
+	
+	sub_ship_radar_3 = {
+		abbreviation = "sbl"
+		category = sub_ship_radar
+		sfx = sfx_ui_sd_module_sonar
+		parent = sub_ship_radar_2
+	
+		add_stats = {
+			build_cost_ic = 50
+			surface_detection = 12
+		}
+		
+		multiply_stats = {
+			sub_visibility = 0.15
+		}
+
+		can_convert_from = {
+			module_category = sub_ship_radar
+			convert_cost_ic = 50
+		}
+	}
+	
+	modern_deck_space = {
+		abbreviation = "sda"
+		category = ship_deck_space_modern
+		gfx = ship_deck_space
+
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 1.5
+			build_cost_ic = 2000
+		}
+		manpower = 500 #outside the add_stats section for code reasons
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		add_stats = {
+			armor_value = 2.5
+			max_strength = 12.5
+		}
+		build_cost_resources = {
+			steel = 1.5
+		}
+		dismantle_cost_ic = 1000
+	}
+	
+	# sub_ship_sonar_1 = {
+		# abbreviation = "sbj"
+		# category = sub_sonar
+		# sfx = sfx_ui_sd_module_sonar
+		
+		# add_stats = {
+			# build_cost_ic = 50
+			# surface_detection = 2.5
+			# sub_detection = 1
+		# }
+
+		# can_convert_from = {
+			# module_category = sub_sonar
+			# convert_cost_ic = 50
+		# }
+	# }
+	
+	# sub_ship_sonar_2 = {
+		# abbreviation = "sbk"
+		# category = sub_sonar
+		# sfx = sfx_ui_sd_module_sonar
+		# parent = sub_ship_sonar_1
+	
+		# add_stats = {
+			# build_cost_ic = 75
+			# surface_detection = 3.5
+			# sub_detection = 2
+		# }
+
+		# can_convert_from = {
+			# module_category = sub_sonar
+			# convert_cost_ic = 75
+		# }
+	# }
+	
+	# sub_ship_sonar_3 = {
+		# abbreviation = "sbl"
+		# category = sub_sonar
+		# sfx = sfx_ui_sd_module_sonar
+		# parent = sub_ship_sonar_2
+	
+		# add_stats = {
+			# build_cost_ic = 100
+			# surface_detection = 12
+			# sub_detection = 15
+		# }
+		
+		# multiply_stats = {
+			# sub_visibility = 0.15
+			# naval_torpedo_hit_chance_factor = 0.05
+		# }
+
+		# can_convert_from = {
+			# module_category = sub_sonar
+			# convert_cost_ic = 100
+		# }
+	# }
+	
+	ship_carrier_island_1 = {
+		abbreviation = "cot"
+		category = ship_carrier_island
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			surface_detection = 2
+			sub_detection = 1
+			build_cost_ic = 150	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.03
+			anti_air_attack = 0.025
+		}
+		
+		can_convert_from = {
+			module_category = ship_carrier_island
+			convert_cost_ic = 100
+		}
+	}
+	
+	ship_carrier_island_2 = {
+		abbreviation = "cot2"
+		category = ship_carrier_island
+		parent = ship_carrier_island_1
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			surface_detection = 4
+			sub_detection = 2
+			reliability = 0.025
+			build_cost_ic = 200	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.02
+			anti_air_attack = 0.05
+		}
+		
+		can_convert_from = {
+			module_category = ship_carrier_island
+			convert_cost_ic = 150
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	ship_carrier_island_3 = {
+		abbreviation = "cot3"
+		category = ship_carrier_island
+		parent = ship_carrier_island_2
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			surface_detection = 6
+			sub_detection = 3
+			reliability = 0.05
+			build_cost_ic = 300	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			anti_air_attack = 0.075
+		}
+		
+		can_convert_from = {
+			module_category = ship_carrier_island
+			convert_cost_ic = 200
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	ship_carrier_island_4 = {
+		abbreviation = "cot4"
+		category = ship_carrier_island
+		parent = ship_carrier_island_2
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			surface_detection = 8
+			sub_detection = 4
+			reliability = 0.075
+			build_cost_ic = 550	
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			anti_air_attack = 0.1
+		}
+		
+		can_convert_from = {
+			module_category = ship_carrier_island
+			convert_cost_ic = 425
+		}
+		build_cost_resources = {
+			aluminium = 1
+		}
+	}
+	
+	sub_cruise_missile_battery_1 = {
+		category = sub_cruise_missile
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			hg_attack = 3
+			build_cost_ic = 230	
+		}
+		
+		build_cost_resources = {
+			aluminium = 1
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.35
+		}
+		
+		critical_parts = { damaged_heavy_guns }
+	}
+		
+	sub_cruise_missile_battery_2 = {
+		category = sub_cruise_missile
+		sfx = sfx_ui_sd_module_turret
+		parent = sub_cruise_missile_battery_1
+		
+		add_stats = {
+			hg_attack = 6
+			build_cost_ic = 275			
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.4
+		}
+		
+		build_cost_resources = {
+			aluminium = 1
+			tungsten = 1
+		}
+		
+		critical_parts = { damaged_heavy_guns }
+	}
+	
+	ship_torpedo_s = {
+		abbreviation = "sch"
+		category = ship_torpedo
+		sfx = sfx_ui_sd_module_turret
+
+		
+		add_stats = {
+			torpedo_attack = 6
+			build_cost_ic = 30
+		}
+		multiply_stats = {
+			naval_speed = -0.01			
+		}
+		build_cost_resources = {
+			steel = 0
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+	
+	ship_torpedo_d = {
+		abbreviation = "sch"
+		category = ship_torpedo
+		sfx = sfx_ui_sd_module_turret
+		parent = ship_torpedo_s
+
+		
+		add_stats = {
+			torpedo_attack = 12
+			build_cost_ic = 60
+		}
+		multiply_stats = {
+			naval_speed = -0.01			
+		}
+		build_cost_resources = {
+			steel = 0
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+	ship_anti_air_5 = {
+		abbreviation = "sbe"
+		category = ship_anti_air
+		parent = ship_anti_air_4
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 6.5
+			build_cost_ic = 200
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.005
+			# build_cost_ic = 0.025
+			# anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_4
+			convert_cost_ic = 50
+		}
+	}
+	
+	dp_ship_secondaries_5 = {
+		abbreviation = "sba"
+		category = ship_dp_secondaries
+		gui_category = ship_secondaries
+		parent = dp_ship_secondaries_4
+		gfx = dp_secondary_battery_5
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			lg_attack = 5.5
+			anti_air_attack = 3.75
+			build_cost_ic = 320
+		}
+
+		multiply_stats = {
+			naval_speed = -0.04
+		}
+		
+		add_average_stats = {
+			lg_armor_piercing = 9
+		}
+		
+		can_convert_from = {
+			module_category = ship_secondaries
+			convert_cost_ic = 200
+		}
+
+		can_convert_from = {
+			module_category = ship_dp_secondaries
+			convert_cost_ic = 200
+		}
+		critical_parts = { damaged_secondaries }
+	}
+
+	dp_light_battery_5 = {
+		abbreviation = "sah"
+		category = dp_light_battery
+		gui_category = ship_light_battery
+		parent = dp_light_battery_4
+		sfx = sfx_ui_sd_module_turret
+	
+		add_stats = {
+			lg_attack = 3
+			anti_air_attack = 5
+			build_cost_ic = 215
+		}
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		add_average_stats = {
+			lg_armor_piercing = 2.375
+		}
+		
+		can_convert_from = {
+			module_category = ship_light_battery
+			convert_cost_ic = 200
+		}
+			
+		can_convert_from = {
+			module = ship_light_battery_3
+			convert_cost_ic = 130
+		}
+		critical_parts = { damaged_light_guns }
+	}
+
+}	

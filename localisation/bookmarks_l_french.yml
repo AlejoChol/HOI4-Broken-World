@@ -1,0 +1,6 @@
+﻿l_french:
+ RANDOMSTART_NAME:0 "Random Start"
+ RANDOMSTART_DESC:0 "Basic scenario with country randomization on game start (Recomended)."
+ RANDOMSTART2_NAME:0 "Random Start: All Tags"
+ RANDOMSTART2_DESC:0 "Extended number of countries with all vanila game tags."
+ BM_HISTORY_TITLE:0 "Scenario Description"

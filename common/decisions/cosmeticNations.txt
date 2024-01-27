@@ -1,0 +1,3 @@
+cosmetic_formable_nations_mod_category = {
+	
+}

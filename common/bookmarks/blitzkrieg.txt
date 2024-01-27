@@ -1,0 +1,18 @@
+bookmarks = {
+	bookmark = {
+		name = "RANDOMSTART2_NAME"
+		desc = "RANDOMSTART2_DESC"
+		date = 1936.1.2.12
+		picture = "GFX_select_date_1939"
+		default_country = "---"
+
+		
+        "---"={}
+
+
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+		}
+	}
+}

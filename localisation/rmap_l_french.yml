@@ -1,0 +1,11 @@
+﻿l_french:
+ wargoal_effort1:"Claim I"
+ wargoal_effort1_desc:""
+ wargoal_effort2:"Claim II"
+ wargoal_effort2_desc:""
+ wargoal_effort3:"Claim III"
+ wargoal_effort3_desc:""
+ random.1.t: "RCP: Options"
+ random.1.d: "This event made to ask you, player, do you want to play with random technologies? Those techs will be picked randomly (Still, chance to get more advanced tech little less than older one), amount of technologies given is from 0 to 7, depending from your luck."
+ random.1.a: "Turn random technologies ON"
+ random.1.b: "No, thanks"

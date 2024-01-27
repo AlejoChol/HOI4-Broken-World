@@ -1,0 +1,43 @@
+ideas = {
+
+country= {
+
+
+SOV_purged_junior_army_officers_3 = {
+			name = SOV_purged_junior_army_officers_1
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via purges
+			}
+
+			allowed_civil_war = {
+				has_country_leader = {
+					character = SOV_iosif_stalin
+					ruling_only = yes
+				}
+			}
+
+			picture = SOV_purged_junior_army_officers
+
+			on_add = {
+				add_ideas = SOV_purged_junior_army_officers_equipment_effects_3
+			}
+
+			on_remove = {
+				remove_ideas = SOV_purged_junior_army_officers_equipment_effects_3
+			}
+			
+			modifier = {
+				army_org_factor = -0.3
+				max_dig_in_factor = -0.45
+				supply_consumption_factor = 0.3
+				land_doctrine_cost_factor = 0.6
+				custom_modifier_tooltip = SOV_purged_junior_army_officers_3_tt #Reliability and only Politically Connected as available trait for new Generals
+			}
+		}
+		
+		}
+		}
+		

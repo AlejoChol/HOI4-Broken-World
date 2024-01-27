@@ -1,11 +1,10 @@
-name="Better AI"
+version="0.1"
 tags={
-	"Balance"
-	"Fixes"
+	"Alternative History"
+	"Map"
+	"National Focuses"
 	"Gameplay"
-	"Utilities"
 }
-picture="betterai.jpg"
-supported_version="1.10.8"
-path="C:/Users/Medion/Documents/Paradox Interactive/Hearts of Iron IV/mod/betterai"
-remote_file_id="822874218"
+name="Broken World 4"
+supported_version="1.13.6"
+remote_file_id="3130748151"

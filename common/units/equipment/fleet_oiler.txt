@@ -1,0 +1,96 @@
+equipments = {
+
+	fleet_oiler = {
+		year = 1922
+
+		interface_category = interface_category_capital_ships
+		
+		is_archetype = yes
+		is_buildable = no
+		type = capital_ship
+		alias = fleet_oiler
+		priority = 10
+		
+		lg_armor_piercing = 0
+		lg_attack = 0.25
+		torpedo_attack = 0
+		sub_attack = 0
+		
+		anti_air_attack = 0.1
+		
+		armor_value = 2.5
+		
+		max_strength = 60
+		max_organisation = 30
+		
+		build_cost_ic = 150
+		
+		surface_detection = 15
+		sub_detection = 0
+		surface_visibility = 10
+		naval_speed = 12
+		reliability = 0.5
+		
+		offensive_weapons = no
+		
+		naval_range = 15000
+		
+		manpower = 250
+		
+		fuel_consumption = 300
+		
+		resources = {
+			#oil = 1
+			steel = 2
+		}
+	}
+		
+	fleet_oiler_1 = {
+		abbreviation = "foil"
+		year = 1922
+		visual_level = 0
+		archetype = fleet_oiler
+		priority = 10
+		
+	}
+		
+	fleet_oiler_2 = {
+		abbreviation = "foi2"
+		parent = fleet_oiler_1
+		offensive_weapons = no
+		year = 1940
+		visual_level = 0
+		archetype = fleet_oiler
+		priority = 10
+		
+		naval_speed = 16		
+		armor_value = 5		
+		max_strength = 90
+		naval_range = 17500
+		fuel_consumption = 400
+		
+		reliability = 0.55
+		
+		build_cost_ic = 200
+	}
+		
+	fleet_oiler_3 = {
+		abbreviation = "foi3"
+		parent = fleet_oiler_2		
+		offensive_weapons = no
+		year = 1950
+		visual_level = 0
+		archetype = fleet_oiler
+		priority = 10
+		
+		naval_speed = 20		
+		armor_value = 7.5		
+		max_strength = 120
+		naval_range = 20000
+		fuel_consumption = 500
+		
+		reliability = 0.6
+		
+		build_cost_ic = 250
+	}
+}

@@ -1,0 +1,20 @@
+
+mio_cat_eq_all_heavy_fighters = {
+	equipment_type = {
+		medium_plane_fighter_airframe
+	}
+}
+
+mio_cat_eq_all_modern_tank = { #Includes Modern Tank Chassis
+	equipment_type = {
+		modern_tank_chassis
+	}
+}
+
+mio_cat_eq_all_rockets = { #Includes Modern Tank Chassis
+	equipment_type = {
+		guided_missile_equipment
+		rocket_interceptor_equipment
+		theater_missile_equipment
+	}
+}

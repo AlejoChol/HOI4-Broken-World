@@ -1,0 +1,13 @@
+ideas = {
+country = { #DLC
+
+		BUL_army_restrictions = {
+			picture = tfv_can_conscription_crisis
+
+			allowed = {
+				always = no
+			}
+			}
+			}
+			}
+			

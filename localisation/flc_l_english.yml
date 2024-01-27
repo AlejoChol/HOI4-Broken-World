@@ -1,0 +1,5 @@
+﻿l_english:
+ feedback_late_civs: "$MODIFIER_CONSUMER_GOODS_FACTOR$ Penalty"
+ feedback_late_civs_desc: "We currently have over §H100§! §G$arms_factory_plural$§! or §H40§! §5$dockyard_plural$§!. For each §GMilitary Factory§! above §H100§! and §5Naval Dockyard§! above §H40§! that are in use, we will gain §H0.1% $MODIFIER_CONSUMER_GOODS_FACTOR$§!, up to §H50%§! each.\n§1This penalty is updated weekly.§!\n\n§G$arms_factory_plural$§! Cost: [?FLC_penalty_military_factories|%Y1]\n\n§5$dockyard_plural$§! Cost: [?FLC_penalty_naval_factories|%Y1]"
+ FLC_military_factory_modifier:0 "Military Factory Cost"
+ FLC_naval_factory_modifier:0 "Naval Factory Cost"
