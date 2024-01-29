@@ -77,7 +77,12 @@ on_actions = {
 				limit = {has_game_rule = {rule = horst_host_country option = SWI}}
 				set_variable={host = SWI.id}
 			}
-			var:host = {
+			var:host = {				
+				country_event = { id = rmap.0 }
+				country_event = { id = random.1 }
+				country_event = { id = shackles.1 }
+				country_event = { id = inc_res.1 }
+				country_event = { id = ett60.1 }
 				set_variable = { marked_states = 0 }
 				set_country_flag = host
 			}

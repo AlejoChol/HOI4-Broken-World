@@ -1,13 +1,13 @@
 on_actions = {
 
 on_startup = {
-		effect = {
-			random_country  = { 
-				limit = { is_ai = no }
-				country_event = { id = rmap.0 }
-				country_event = { id = random.1 }
-			}
-		}
+		#effect = {
+		#	random_country  = { 
+		#		limit = { is_ai = no }
+		#		country_event = { id = rmap.0 }
+		#		country_event = { id = random.1 }
+		#	}
+		#}
 	}
 		
 	on_government_change = {
