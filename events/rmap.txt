@@ -334,83 +334,199 @@ country_event = {
 		drop_cosmetic_tag = yes
 	}
 
+	log = "Randomizing states |"
 	every_state = {
-		limit = {NOT =  {has_state_flag = rmap_owned is_owned_by = JAN}} 
+		limit = {NOT =  {has_state_flag = rmap_owned }} 
+		set_temp_variable = {rmap_rstate = THIS }
+		log = "Analyzing state [?rmap_rstate.GetID] "
 		if = {
-			limit = {is_island_state = yes }
-			random_country = {
-				limit = {
-					any_owned_state = {
-						OR = {is_coastal = yes is_island_state = yes } 
-						has_state_flag = rmap_owned
+			limit = {NOT = {has_state_flag = rmap_owned}}
+			if = {
+				limit = {is_island_state = yes }
+				log = "State is island"
+				random_country = {
+					limit = {
+						any_owned_state = {
+							OR = {is_coastal = yes is_island_state = yes } 
+							has_state_flag = rmap_owned
+						}
+						NOT = {tag = JAN}
 					}
+					transfer_state = PREV
+					PREV = {set_state_flag = rmap_owned}
+					set_temp_variable = {rmap_rcountry = THIS }
+					log = "State is now owned by [?rmap_rcountry.GetTag]"
 				}
-				transfer_state = PREV
-				PREV = {set_state_flag = rmap_owned}
 			}
-		}
-		else_if = {
-			limit = {is_coastal = yes}
-			random_list={
-				1={
-					random_country = {
-						limit = {
-							any_owned_state = {
-								OR = {is_coastal = yes is_island_state = yes } 
-								has_state_flag = rmap_owned
-							}
-						} 
-						transfer_state = PREV
-						PREV = {set_state_flag = rmap_owned}
+			else_if = {
+				limit = {is_coastal = yes}
+				log = "State is coastal"
+				random_list={
+					1={
+						random_country = {
+							limit = {
+								any_owned_state = {
+									OR = {is_coastal = yes is_island_state = yes } 
+									has_state_flag = rmap_owned
+								}
+								NOT = {tag = JAN}
+							} 
+							transfer_state = PREV
+							PREV = {set_state_flag = rmap_owned}
+							set_temp_variable = {rmap_rcountry = THIS }
+							log = "State is now owned by overseas nation [?rmap_rcountry.GetTag]"
+						}
 					}
-				}
-				3={
-					transfer_state_to = JAN
-					while_loop_effect = {
-						limit = {has_state_flag = rmap_owned}
-						JAN = {
-							every_owned_state = {
-								limit = {NOT = {has_state_flag = rmap_owned}}
-								every_neighbor_state = {
-									if = { 
-										limit = {has_state_flag = rmap_owned}
-										owner = {
-											JAN = {
-												every_owned_state = {limit = {NOT = {has_state_flag = rmap_owned}} set_state_flag = rmap_owned}}
-											annex_country = {target = JAN}
+					99={
+						log = "State will start Jan-Mayeing surrounding states"
+						transfer_state_to = JAN
+						set_temp_variable = {temp_break = 0 }
+						set_temp_variable = {rmap_IsJanMayenAlone = 0 }
+						log = "rmap_IsJanMayenAlone init [?rmap_IsJanMayenAlone] "
+						while_loop_effect = {
+							break = break
+							limit = {NOT = { OR = { check_variable = {rmap_IsJanMayenAlone = 1} check_variable = {temp_break = 1}}}}
+							set_temp_variable = {rmap_IsJanMayenAlone = 1 } log = "rmap_IsJanMayenAlone [?rmap_IsJanMayenAlone] "
+							JAN = {
+								every_owned_state = {
+									if = { limit = {check_variable = {temp_break = 0}}
+										set_temp_variable = {rmap_rstate = THIS}
+										log = "Spreading from [?rmap_rstate.GetID] "
+										every_neighbor_state = {
+											if = { limit = {check_variable = {temp_break = 0}}
+												set_temp_variable = {rmap_rstate = THIS}
+												log = "Checking spread at [?rmap_rstate.GetID] "
+												if = { 
+													limit = { has_state_flag = rmap_owned }
+													owner = {
+														set_temp_variable = {rmap_rcountry = THIS}
+														log = "Country found [?rmap_rcountry.GetTag] at state [?rmap_rstate.GetID], annexing"
+														JAN = {
+															every_owned_state = {
+																set_state_flag = rmap_owned
+																transfer_state_to = PREV.PREV
+																set_temp_variable = {rmap_rstate = THIS}
+																log = "Setting state [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
+															}}
+														}
+													set_temp_variable = {temp_break = 1 }
+												}
+												else_if ={ 
+													limit = {NOT = { is_owned_by = JAN  } }
+													log = "Transfering state to Jan Mayen"
+													transfer_state_to = JAN
+													set_temp_variable = {rmap_IsJanMayenAlone = 0} log = "rmap_IsJanMayenAlone triggered [?rmap_IsJanMayenAlone] "
+												}
+												else = {}
+											}
 										}
 									}
-									else = {transfer_state_to = JAN}
 								}
+							}
+						}
+						if = {
+							limit = {AND = {check_variable = {rmap_IsJanMayenAlone = 1} check_variable = {temp_break = 0}}}
+							random_country = {
+								limit = {
+									AND = {
+										any_owned_state = {
+											is_coastal = yes
+											has_state_flag = rmap_owned
+										}
+										NOT = {tag = JAN}
+									}
+								}
+								JAN = {
+									every_owned_state = {
+										set_state_flag = rmap_owned
+										transfer_state_to = PREV.PREV
+										set_temp_variable = {rmap_rstate = THIS}
+										log = "Setting state [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
+									}
+								}
+								set_temp_variable = {var=rmap_rcountry value=THIS tooltip=rmap_rcountry}
+								log = "Jan Mayen was alone, and is now owned by [?rmap_rcountry.GetTag]"
 							}
 						}
 					}
 				}
 			}
-		}
-		else = {
-			transfer_state_to = JAN
-			while_loop_effect = {
-				limit = {has_state_flag = rmap_owned}
-				JAN = {
-					every_core_state = {
-						every_neighbor_state = {
-							if = { 
-								limit = {has_state_flag = rmap_owned}
-								owner = {
-									JAN = {
-										every_owned_state = {limit = {NOT = {has_state_flag = rmap_owned}} set_state_flag = rmap_owned}}
-									annex_country = {target = JAN}
+			else = {
+					log = "State is inland"
+					log = "State will start Jan-Mayeing surrounding states"
+					transfer_state_to = JAN
+					set_temp_variable = {temp_break = 0 }
+					set_temp_variable = {rmap_IsJanMayenAlone = 0 }
+					log = "rmap_IsJanMayenAlone init [?rmap_IsJanMayenAlone] "
+					while_loop_effect = {
+						break = break
+						limit = {NOT = { OR = { check_variable = {rmap_IsJanMayenAlone = 1} check_variable = {temp_break = 1}}}}
+						set_temp_variable = {rmap_IsJanMayenAlone = 1 } log = "rmap_IsJanMayenAlone [?rmap_IsJanMayenAlone] "
+						JAN = {
+							every_owned_state = {
+								if = { limit = {check_variable = {temp_break = 0}}
+									set_temp_variable = {rmap_rstate = THIS}
+									log = "Spreading from [?rmap_rstate.GetID] "
+									every_neighbor_state = {
+										if = { limit = {check_variable = {temp_break = 0}}
+											set_temp_variable = {rmap_rstate = THIS}
+											log = "Checking spread at [?rmap_rstate.GetID] "
+											if = { 
+												limit = { has_state_flag = rmap_owned }
+												owner = {
+													set_temp_variable = {rmap_rcountry = THIS}
+													log = "Country found [?rmap_rcountry.GetTag] at state [?rmap_rstate.GetID], annexing"
+													JAN = {
+														every_owned_state = {
+															set_state_flag = rmap_owned
+															transfer_state_to = PREV.PREV
+															set_temp_variable = {rmap_rstate = THIS}
+															log = "Setting state [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
+														}}
+													}
+												set_temp_variable = {temp_break = 1 }
+											}
+											else_if ={ 
+												limit = {NOT = { is_owned_by = JAN  } }
+												log = "Transfering state to Jan Mayen"
+												transfer_state_to = JAN
+												set_temp_variable = {rmap_IsJanMayenAlone = 0} log = "rmap_IsJanMayenAlone triggered [?rmap_IsJanMayenAlone] "
+											}
+											else = {}
+										}
+									}
 								}
 							}
-							else = {transfer_state_to = JAN}
 						}
 					}
-				}
+					if = {
+						limit = {AND = {check_variable = {rmap_IsJanMayenAlone = 1} check_variable = {temp_break = 0}}}
+						random_country = {
+							limit = {
+								AND = {
+									any_owned_state = {
+										is_coastal = yes
+										has_state_flag = rmap_owned
+									}
+									NOT = {tag = JAN}
+								}
+							}
+							JAN = {
+								every_owned_state = {
+									set_state_flag = rmap_owned
+									transfer_state_to = PREV.PREV
+									set_temp_variable = {rmap_rstate = THIS}
+									log = "Setting stthate [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
+								}
+							}
+							set_temp_variable = {var=rmap_rcountry value=THIS tooltip=rmap_rcountry}
+							log = "Jan Mayen was alone, and is now owned by [?rmap_rcountry.GetTag]"
+						}
+					}
 			}
 		}
-
 	}
+
 	
 	#Randomize states' stats
 	every_state = {
