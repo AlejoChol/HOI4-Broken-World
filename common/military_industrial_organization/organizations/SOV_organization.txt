@@ -96,41 +96,6 @@ SOV_morozov_design_bureau_organization = {
 		}
 	}
 
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { tag = MEX }
-			}
-			FROM = { is_in_faction_with = SOV }
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = {
-					OR = {
-						is_literally_china = yes
-						tag = MAN
-						tag = MEN
-					}
-				} 
-			}
-			FROM = { has_completed_focus = CHI_hire_soviet_designer }
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
-		}
-	}
-
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_174
 		name = SOV_merge_tank_plant
@@ -142,15 +107,6 @@ SOV_morozov_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
 		}
 
 		on_complete = {
@@ -178,14 +134,6 @@ SOV_morozov_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -212,14 +160,6 @@ SOV_morozov_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -255,14 +195,6 @@ SOV_astrov_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -289,14 +221,6 @@ SOV_astrov_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -323,14 +247,6 @@ SOV_astrov_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -359,33 +275,6 @@ SOV_okmo_organization = {
 		}
 	}
 
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_okmo_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				#is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_174
@@ -400,14 +289,6 @@ SOV_okmo_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -434,14 +315,6 @@ SOV_okmo_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -468,14 +341,6 @@ SOV_okmo_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -511,15 +376,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 		}
 	}
 
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_174
@@ -534,14 +390,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -568,14 +416,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -602,14 +442,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -651,15 +483,6 @@ SOV_kirov_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -685,15 +508,6 @@ SOV_kirov_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -717,15 +531,6 @@ SOV_kirov_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
 		}
 
 		on_complete = {
@@ -767,33 +572,6 @@ SOV_nevskoye_design_bureau_organization = {
 		}
 	}
 	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_nevskoye_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				#is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-	}
 
 	add_trait = { #MTG version
 		token = SOV_mio_trait_merge_plant_no_370
@@ -808,14 +586,6 @@ SOV_nevskoye_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -859,14 +629,6 @@ SOV_nevskoye_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
 
 		visible = {
 			NOT = { has_dlc = "Man the Guns" }
@@ -910,15 +672,6 @@ SOV_nevskoye_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-			#Only exists in this MIO
-		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
 
@@ -950,23 +703,6 @@ SOV_rubin_design_bureau_organization = {
 		}
 	}
 
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
-		}
-	}
-
 	add_trait = { #MTG version
 		token = SOV_mio_trait_merge_plant_no_370
 		name = SOV_merge_ship_plant_4_baltic
@@ -978,15 +714,6 @@ SOV_rubin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
 		}
 
 		on_complete = {
@@ -1029,15 +756,6 @@ SOV_rubin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
 		}
 
 		visible = {
@@ -1084,16 +802,6 @@ SOV_rubin_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_surface_warfare
-			}
-			#Only exists in this MIO
-		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_destroyer }
 
@@ -1115,17 +823,6 @@ SOV_rubin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_submarine_warfare
-			}
-			#Only exists in this MIO
 		}
 
 		limit_to_equipment_type = { ship_hull_submarine }
@@ -1186,15 +883,6 @@ SOV_black_sea_shipyard_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1237,18 +925,6 @@ SOV_black_sea_shipyard_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
-
-		visible = {
-			NOT = { has_dlc = "Man the Guns" }
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1290,16 +966,6 @@ SOV_black_sea_shipyard_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 202 #KIEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_surface_warfare
-			}
-			#Only exists in this MIO
-		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_destroyer }
 
@@ -1323,16 +989,6 @@ SOV_black_sea_shipyard_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-				has_completed_focus = SOV_submarine_warfare
-			}
-			#Only exists in this MIO
-		}
 
 		limit_to_equipment_type = { ship_hull_submarine }
 		
@@ -1387,14 +1043,6 @@ SOV_sevastopol_marine_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1438,14 +1086,6 @@ SOV_sevastopol_marine_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-		}
 
 		visible = {
 			NOT = { has_dlc = "Man the Guns" }
@@ -1489,15 +1129,6 @@ SOV_sevastopol_marine_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 197 #MYKOLAIV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_naval_plants
-			}
-			#Only exists in this MIO
-		}
 
 		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
 
@@ -1539,15 +1170,6 @@ SOV_mig_design_bureau_organization = {
 		}
 	}
 
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_28
@@ -1562,14 +1184,6 @@ SOV_mig_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1596,14 +1210,6 @@ SOV_mig_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1635,14 +1241,6 @@ SOV_mig_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1679,33 +1277,6 @@ SOV_ilyushin_design_bureau_organization = {
 		}
 	}
 	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_ilyushin_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				#is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_plant_no_28
@@ -1720,14 +1291,6 @@ SOV_ilyushin_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 		
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1752,15 +1315,6 @@ SOV_ilyushin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-		
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1791,15 +1345,6 @@ SOV_ilyushin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-		
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1843,15 +1388,6 @@ SOV_yakovlev_design_bureau_organization = {
 		visible = {
 			FROM = { original_tag = SOV }
 		}
-		
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1876,15 +1412,6 @@ SOV_yakovlev_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-		
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1915,15 +1442,6 @@ SOV_yakovlev_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-		
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1989,8 +1507,6 @@ SOV_tupolev_design_bureau_organization = {
 
 		any_parent = { generic_mio_trait_pressurized_cockpit }
 		
-		available = {
-		}
 
 		equipment_bonus = {
 			air_defence = 0.05
@@ -2009,8 +1525,6 @@ SOV_tupolev_design_bureau_organization = {
 
 		any_parent = { generic_mio_trait_pressurized_cockpit }
 		
-		available = {
-		}
 
 		equipment_bonus = {
 			fuel_consumption = -0.05
@@ -2031,14 +1545,6 @@ SOV_tupolev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2065,14 +1571,6 @@ SOV_tupolev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2104,14 +1602,6 @@ SOV_tupolev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2163,50 +1653,6 @@ SOV_grabin_design_bureau_organization = {
 		}
 	}
 	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = GRE } }
-			FROM = {
-				has_completed_focus = GRE_appeal_to_the_soviet_union 
-			}
-		}
-	}
-
-	add_trait = { 
-		token = SOV_mio_trait_merge_plant_no_172
-		name = SOV_merge_materiel_plant_1_artillery
-		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_department_icon_artillery_production
-		special_trait_background = yes
-
-		position = { x=@materiel_1_X y=@materiel_1_Y }
-		
-		visible = {
-			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 398 #PERM
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-			#Only exists in this MIO
-		}
-
-		production_bonus = {
-			production_cost_factor = @artillery_production_cost_factor
-		}
-	}
 	
 	add_trait = { 
 		token = SOV_mio_trait_merge_nkmz_plant
@@ -2219,15 +1665,6 @@ SOV_grabin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
 		}
 
 		on_complete = {
@@ -2255,14 +1692,6 @@ SOV_grabin_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 582 #MAGNITOGORSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2329,15 +1758,6 @@ SOV_tula_arms_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 399 #UDMURTIA (Izhevsk)
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-			#Only exists in this MIO
-		}
 
 		production_bonus = {
 			production_cost_factor = @infantry_equipment_production_cost_factor
@@ -2357,14 +1777,6 @@ SOV_tula_arms_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2391,14 +1803,6 @@ SOV_tula_arms_plant_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 582 #MAGNITOGORSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2439,39 +1843,6 @@ SOV_gaz_organization = {
 		}
 	}
 	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_gaz_mio_flag
-				}
-			}
-			FROM = {
-				OR = {
-					is_subject = no
-					is_subject_of = SOV
-				}
-				#is_in_faction_with = SOV
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = { original_tag = NOR }
-			}
-			FROM = { has_completed_focus = NOR_invite_soviet_designers }
-		}
-	}
 
 	add_trait = { 
 		token = SOV_mio_trait_merge_automobile_tool_plant
@@ -2486,15 +1857,6 @@ SOV_gaz_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-			#Only exists in this MIO
-		}
 
 		production_bonus = {
 			production_cost_factor = @motorized_production_cost_factor
@@ -2514,14 +1876,6 @@ SOV_gaz_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 227 #STALINO
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -2548,14 +1902,6 @@ SOV_gaz_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 582 #MAGNITOGORSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations

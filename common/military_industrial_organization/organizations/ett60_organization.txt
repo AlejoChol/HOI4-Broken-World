@@ -36,11 +36,6 @@ generic_modern_tank_organization = {
 		always = no # Archetype only - countries using it have their own verisons
 	}
 
-	available = {
-		owner ={
-			has_tech = main_battle_tank_chassis
-		}
-	}
 	equipment_type = { mio_cat_eq_all_modern_tank }
 	research_categories = { mio_cat_tech_modern_armor_and_modules }
 
@@ -314,15 +309,6 @@ SOV_uralvagonzavod = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = { #Two FROM blocs to provide two different check marks in the UI
-			FROM = {
-				has_full_control_of_state = 195 #LENINGRAD
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -348,15 +334,6 @@ SOV_uralvagonzavod = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 252 #GORKY
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -380,15 +357,6 @@ SOV_uralvagonzavod = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 653 #SVERDLOVSK
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_tank_and_materiel_plants
-			}
 		}
 
 		on_complete = {
@@ -1056,15 +1024,6 @@ SOV_sukhoi_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1088,15 +1047,6 @@ SOV_sukhoi_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1127,15 +1077,6 @@ SOV_sukhoi_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1179,15 +1120,6 @@ SOV_lavochkin_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1213,24 +1145,10 @@ SOV_lavochkin_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
 				set_country_flag = SOV_merge_plant_no_150_flag
-				add_resource = {
-					type = aluminium
-					amount = 3
-					state = 219
-				}
 			}
 		}
 
@@ -1250,15 +1168,6 @@ SOV_lavochkin_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1302,14 +1211,6 @@ SOV_beriev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1335,16 +1236,6 @@ SOV_beriev_design_bureau_organization = {
 		visible = {
 			FROM = { original_tag = SOV }
 		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1375,14 +1266,6 @@ SOV_beriev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
 
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
@@ -1425,15 +1308,6 @@ SOV_myasishchev_design_bureau_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1458,16 +1332,6 @@ SOV_myasishchev_design_bureau_organization = {
 		visible = {
 			FROM = { original_tag = SOV }
 		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1496,15 +1360,6 @@ SOV_myasishchev_design_bureau_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1548,15 +1403,6 @@ SOV_peltyakov_organization = {
 			FROM = { original_tag = SOV }
 		}
 
-		available = {
-			FROM = {
-				has_full_control_of_state = 251 #KUYBYSHEV
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
-		}
-
 		on_complete = {
 			custom_effect_tooltip = SOV_trait_will_not_be_available_in_other_organizations
 			FROM = {
@@ -1580,15 +1426,6 @@ SOV_peltyakov_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 219 #MOSCOW
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
@@ -1619,15 +1456,6 @@ SOV_peltyakov_organization = {
 		
 		visible = {
 			FROM = { original_tag = SOV }
-		}
-
-		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
-			}
-			FROM = {
-				has_completed_focus = SOV_merge_aircraft_plants
-			}
 		}
 
 		on_complete = {
