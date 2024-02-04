@@ -10034,7 +10034,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		relative_position_id = political_effort
@@ -10832,7 +10836,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		relative_position_id = political_effort
@@ -11567,7 +11575,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		relative_position_id = the_democratic_way
@@ -12420,7 +12432,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		relative_position_id = the_kings_party
@@ -12619,7 +12635,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		relative_position_id = political_effort
@@ -13118,7 +13138,11 @@ focus = {
 		cost = 4.0
 
         ai_will_do = {
-			factor = 999
+			base = 999
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = picked_government
+			}
 		}
 
 		available_if_capitulated = yes
