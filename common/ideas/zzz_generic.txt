@@ -3425,6 +3425,28 @@ ideas = {
 
 		}
 
+		the_five_year_plan_suspended_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+
+			modifier = {
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				conscription = -0.02
+			}
+
+		}
+
 		expand_education_facilities_idea = {
 			allowed = {
 				always = no

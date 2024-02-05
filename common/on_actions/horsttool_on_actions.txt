@@ -83,6 +83,7 @@ on_actions = {
 				country_event = { id = shackles.1 }
 				country_event = { id = inc_res.1 }
 				country_event = { id = ett60.1 }
+				country_event = { id = difficultyevent.1 }
 				set_variable = { marked_states = 0 }
 				set_country_flag = host
 			}

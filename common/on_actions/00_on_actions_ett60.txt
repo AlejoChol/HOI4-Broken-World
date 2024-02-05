@@ -25,3 +25,24 @@ on_actions = {
 	#	}
 	#}
 }
+
+on_war = {
+	effect = {
+		limit = {
+			has_idea = the_five_year_plan_idea
+		}
+		remove_ideas = the_five_year_plan_idea
+	}
+}
+
+on_peace = {
+	effect = {
+		limit = {
+			has_idea = the_five_year_plan_suspended_idea
+		}
+		swap_ideas = {
+			remove_idea = the_five_year_plan_suspended_idea
+			add_idea = the_five_year_plan_idea
+		}
+	}
+}
