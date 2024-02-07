@@ -20,7 +20,7 @@ equipments = {
 		maximum_speed = 4
 
 		#Defensive Abilities
-		defense = 20
+		defense = 12
 		breakthrough = 2
 		hardness = 0
 		armor_value = 0
@@ -62,7 +62,7 @@ equipments = {
 		visual_level = 1
 
 		#Defensive Abilities
-		defense = 22
+		defense = 16
 		breakthrough = 3
 
 		#Offensive Abilities
@@ -84,7 +84,7 @@ equipments = {
 		visual_level = 2
 		
 		#Defensive Abilities
-		defense = 28
+		defense = 20
 		breakthrough = 4
 
 		#Offensive Abilities
@@ -119,7 +119,7 @@ equipments = {
 		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 0.69
+		build_cost_ic = 1.5
 		resources = {
 			steel = 4
 		}
@@ -145,7 +145,7 @@ equipments = {
 		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 0.78
+		build_cost_ic = 2
 		resources = {
 			steel = 4
 		}
@@ -171,7 +171,7 @@ equipments = {
 		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 0.86
+		build_cost_ic = 2.5
 		resources = {
 			steel = 4
 		}
