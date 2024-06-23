@@ -84,16 +84,16 @@ equipments = {
 		visual_level = 2
 		
 		#Defensive Abilities
-		defense = 20
+		defense = 16
 		breakthrough = 4
 
 		#Offensive Abilities
-		soft_attack = 9
-		hard_attack = 1.5
+		soft_attack = 10
+		hard_attack = 2
 		ap_attack = 5
 		air_attack = 0
 		
-		build_cost_ic = 0.58
+		build_cost_ic = 2.58
 		resources = {
 			steel = 3
 		}
@@ -109,17 +109,17 @@ equipments = {
 		visual_level = 3
 		
 		#Defensive Abilities
-		defense = 34
+		defense = 26
 		breakthrough = 5
 
 		#Offensive Abilities
-		soft_attack = 12
-		hard_attack = 2
+		soft_attack = 14
+		hard_attack = 3
 		ap_attack = 10
 		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 1.5
+		build_cost_ic = 4.5
 		resources = {
 			steel = 4
 		}
@@ -135,17 +135,17 @@ equipments = {
 		visual_level = 3
 		
 		#Defensive Abilities
-		defense = 40
+		defense = 32
 		breakthrough = 6
 
 		#Offensive Abilities
-		soft_attack = 15
-		hard_attack = 3
-		ap_attack = 12
+		soft_attack = 18
+		hard_attack = 5
+		ap_attack = 16
 		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 2
+		build_cost_ic = 8
 		resources = {
 			steel = 4
 		}

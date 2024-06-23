@@ -214,11 +214,11 @@ equipments = {
 		priority = 60
 		visual_level = 1
 		
-		defense = 15
-		breakthrough = 12
-		soft_attack = 38
+		defense = 6
+		breakthrough = 18
+		soft_attack = 44
 		
-		build_cost_ic = 5
+		build_cost_ic = 24
 		resources = {
 			tungsten = 2
 			steel = 1
@@ -238,10 +238,10 @@ equipments = {
 		}
 
 
-		defense = 19
-		breakthrough = 16
-		soft_attack = 46
-		build_cost_ic = 6
+		defense = 8
+		breakthrough = 24
+		soft_attack = 60
+		build_cost_ic = 32
 		resources = {
 			tungsten = 2
 			steel = 2
@@ -261,10 +261,10 @@ equipments = {
 		}
 
 
-		defense = 24
-		breakthrough = 21
-		soft_attack = 54
-		build_cost_ic = 7
+		defense = 8
+		breakthrough = 30
+		soft_attack = 76
+		build_cost_ic = 40
 		resources = {
 			tungsten = 3
 			steel = 2

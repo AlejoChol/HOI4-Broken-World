@@ -56,8 +56,9 @@ equipments = {
 		
 		hard_attack = 22
 		ap_attack = 90
+		defence = 8
 		
-		build_cost_ic = 5
+		build_cost_ic = 14
 		resources = {
 			tungsten = 2
 			chromium = 1
@@ -74,9 +75,10 @@ equipments = {
 		visual_level = 2
 		
 		hard_attack = 30
-		ap_attack = 125
+		ap_attack = 135
+		defence = 8
 		
-		build_cost_ic = 6
+		build_cost_ic = 20
 		resources = {
 			tungsten = 2
 			steel = 3
@@ -92,10 +94,11 @@ equipments = {
 		priority = 90
 		visual_level = 2
 		
-		hard_attack = 38
-		ap_attack = 142
+		hard_attack = 45
+		ap_attack = 180
+		defence = 8
 		
-		build_cost_ic = 7
+		build_cost_ic = 26
 		resources = {
 			tungsten = 2
 			steel = 3
@@ -110,10 +113,11 @@ equipments = {
 		priority = 90
 		visual_level = 2
 		
-		hard_attack = 46
-		ap_attack = 163
+		hard_attack = 56
+		ap_attack = 220
+		defence = 8
 		
-		build_cost_ic = 8
+		build_cost_ic = 36
 		resources = {
 			aluminium = 1
 			tungsten = 1

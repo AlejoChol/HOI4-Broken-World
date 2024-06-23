@@ -1,1 +1,1 @@
-NDefines.NFocus.FOCUS_POINT_DAYS = 3.5
+NDefines.NFocus.FOCUS_POINT_DAYS = 10
