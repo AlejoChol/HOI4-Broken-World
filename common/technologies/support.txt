@@ -2200,7 +2200,7 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1939
 		folder = {
 			name = support_folder
