@@ -532,55 +532,18 @@ country_event = {
 	every_state = {
 
 		# Randomize manpower
+
+		# BUG: https://forum.paradoxplaza.com/forum/threads/hoi-4-adding-negative-manpower-adds-free-recruitable-population-1-6-1.1158528/
+		# population removed from state adds to manpower pool, doesn't work as population reset method
+		# add_manpower = -100000000
+
 		if = { limit = { is_island_state = no }
-			random_list = {
-				45 = {add_manpower = 250000} 
-				25 = {add_manpower = 500000} 
-				15 = {add_manpower = 900000} 
-				12 = {add_manpower = 1600000} 
-				3 = {add_manpower = 2800000}
-			}
-			random_list = {
-				45 = {add_manpower = 250000} 
-				25 = {add_manpower = 500000} 
-				15 = {add_manpower = 900000} 
-				12 = {add_manpower = 1600000} 
-				3 = {add_manpower = 2800000}
-			}
-			random_list = {
-				45 = {add_manpower = 250000} 
-				25 = {add_manpower = 500000} 
-				15 = {add_manpower = 900000} 
-				12 = {add_manpower = 1600000} 
-				3 = {add_manpower = 2800000}
-			}
 			if = {limit = {is_coastal = yes} 
 				30 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 20 }}}
 				20 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 15 }}}
 				15 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 10 }}}
 			}
 			else = {
-				random_list = {
-					15 = {add_manpower = 80000} 
-					20 = {add_manpower = 160000} 
-					30 = {add_manpower = 350000} 
-					20 = {add_manpower = 700000} 
-					15 = {add_manpower = 950000}
-				}
-				random_list = {
-					15 = {add_manpower = 80000} 
-					20 = {add_manpower = 160000} 
-					30 = {add_manpower = 350000} 
-					20 = {add_manpower = 700000} 
-					15 = {add_manpower = 950000}
-				}
-				random_list = {
-					15 = {add_manpower = 80000} 
-					20 = {add_manpower = 160000} 
-					30 = {add_manpower = 350000} 
-					20 = {add_manpower = 700000} 
-					15 = {add_manpower = 950000}
-				}
 				random_list = {
 					30 = {}
 					20 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 2 }}}
@@ -590,13 +553,6 @@ country_event = {
 		}
 		else = { 
 			random_list = {
-				45 = {add_manpower = 25000} 
-				25 = {add_manpower = 50000} 
-				15 = {add_manpower = 90000} 
-				12 = {add_manpower = 160000} 
-				3 = {add_manpower = 280000}
-			}
-			random_list = {
 				30 = {}
 				20 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 4 }}}
 				15 = {OWNER = {add_equipment_to_stockpile = { type = convoy_1 amount = 8 }}}
@@ -605,59 +561,302 @@ country_event = {
 
 		
 		
-		random_list = { 2 = {} 1 = {set_building_level={type = industrial_complex level = 1}}}
-		random_list = { 3 = {} 1 = {set_building_level={type = arms_factory level = 2}}}
-		if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
-			random_list = { 2 = {} 1 = {set_building_level={type = dockyard level = 1}}}
-		}
 
-		random_list = { 5 = {} 1 = {set_building_level={type = air_base level = 1}}}
+
+		random_list = { 19 = {} 1 = {set_building_level={type = air_base level = 1}}}
 		
-		#
 
 
 		random_list = { 
-		# 32={}
+			#wasteland state
 			1={
 				set_state_category = wasteland 
 				set_building_level ={type = infrastructure level = 1}
 			}
+
+			#pastoral state
 			8={
 				set_state_category = pastoral 
+				
+				#randomized infr
 				random_list={
 					4={set_building_level ={type = infrastructure level = 1}}
 					8={set_building_level ={type = infrastructure level = 2}}
 					2={set_building_level ={type = infrastructure level = 3}}
 				}
+				
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						19= {set_building_level={type = dockyard level = 0}}  
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					19= {set_building_level={type = industrial_complex level = 0}}
+					1 = {set_building_level={type = industrial_complex level = 1}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					19= {set_building_level={type = arms_factory level = 0}} 
+					1 = {set_building_level={type = arms_factory level = 1}}
+				}
+
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
 			}
+
+			#rural state
 			16={
 				set_state_category = rural
+				
+				#randomized infr
 				random_list={
 					4={set_building_level ={type = infrastructure level = 1}}
 					8={set_building_level ={type = infrastructure level = 2}}
 					2={set_building_level ={type = infrastructure level = 3}}
+				}
+
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						19= {set_building_level={type = dockyard level = 0}}  
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					2 = {set_building_level={type = industrial_complex level = 2}} 
+					4 = {set_building_level={type = industrial_complex level = 1}}
+					1 = {set_building_level={type = industrial_complex level = 0}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					19= {set_building_level={type = arms_factory level = 0}} 
+					1 = {set_building_level={type = arms_factory level = 1}}
+				}
+
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
 				}
 			}
 			32={
 				set_state_category = town
+
+				#randomized infr
 				random_list={
 					2={set_building_level ={type = infrastructure level = 2}}
 					4={set_building_level ={type = infrastructure level = 3}}
 					8={set_building_level ={type = infrastructure level = 4}}
 				}
+				
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						5 = {set_building_level={type = dockyard level = 0}}  
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					1 = {set_building_level={type = industrial_complex level = 2}} 
+					1 = {set_building_level={type = industrial_complex level = 1}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					9 = {set_building_level={type = arms_factory level = 0}} 
+					1 = {set_building_level={type = arms_factory level = 1}}
+				}
+
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
 			}
 			16={
 				set_state_category = large_town
+
+				#randomized infr
 				random_list={
 					8={set_building_level ={type = infrastructure level = 3}}
 					1={set_building_level ={type = infrastructure level = 4}}
 				}
+
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						3 = {set_building_level={type = dockyard level = 0}}  
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					2 = {set_building_level={type = industrial_complex level = 2}} 
+					1 = {set_building_level={type = industrial_complex level = 1}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					5 = {set_building_level={type = arms_factory level = 0}} 
+					1 = {set_building_level={type = arms_factory level = 1}}
+				}
+				
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
 			}
 			8={
 				set_state_category = city
+
+				#randomized infr
 				random_list={
 					8={set_building_level ={type = infrastructure level = 3}}
 					4={set_building_level ={type = infrastructure level = 4}}
+				}
+
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						3 = {set_building_level={type = dockyard level = 0}} 
+						2 = {set_building_level={type = dockyard level = 2}} 
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					1= {set_building_level={type = industrial_complex level = 3}} 
+					2 = {set_building_level={type = industrial_complex level = 2}} 
+					1 = {set_building_level={type = industrial_complex level = 1}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					1 = {set_building_level={type = arms_factory level = 0}} 
+					2 = {set_building_level={type = arms_factory level = 1}}
+					2 = {set_building_level={type = arms_factory level = 3}}
+				}
+
+				
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
 				}
 			}
 			4={
@@ -666,6 +865,74 @@ country_event = {
 					8={set_building_level ={type = infrastructure level = 3}}
 					8={set_building_level ={type = infrastructure level = 4}}
 				}
+
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						3 = {set_building_level={type = dockyard level = 2}} 
+						2 = {set_building_level={type = dockyard level = 4}} 
+						1 = {set_building_level={type = dockyard level = 1}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					1= {set_building_level={type = industrial_complex level = 5}} 
+					2 = {set_building_level={type = industrial_complex level = 3}} 
+					1 = {set_building_level={type = industrial_complex level = 1}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					1 = {set_building_level={type = arms_factory level = 0}} 
+					2 = {set_building_level={type = arms_factory level = 1}}
+					2 = {set_building_level={type = arms_factory level = 6}}
+				}
+
+				
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
 			}
 			2={
 				set_state_category = metropolis
@@ -673,9 +940,152 @@ country_event = {
 					8={set_building_level ={type = infrastructure level = 3}}
 					16={set_building_level ={type = infrastructure level = 4}}
 				}
+				
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						3 = {set_building_level={type = dockyard level = 6}} 
+						2 = {set_building_level={type = dockyard level = 8}} 
+						1 = {set_building_level={type = dockyard level = 3}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					1= {set_building_level={type = industrial_complex level = 8}} 
+					2 = {set_building_level={type = industrial_complex level = 10}} 
+					1 = {set_building_level={type = industrial_complex level = 5}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					1 = {set_building_level={type = arms_factory level = 0}} 
+					2 = {set_building_level={type = arms_factory level = 3}}
+					2 = {set_building_level={type = arms_factory level = 8}}
+				}
+
+				
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
 			}
 			1={
 				set_state_category = megalopolis
+
+				#randomized infr
+				random_list={
+					8={set_building_level ={type = infrastructure level = 3}}
+					4={set_building_level ={type = infrastructure level = 4}}
+					2={set_building_level ={type = infrastructure level = 5}}
+				}
+
+				#randomized industry
+				#dockyards
+				if = {limit = { OR = {is_coastal = yes is_island_state = yes } } 
+					random_list = { 
+						3 = {set_building_level={type = dockyard level = 6}} 
+						2 = {set_building_level={type = dockyard level = 12}} 
+						1 = {set_building_level={type = dockyard level = 8}}}
+				}
+
+				#civilian industry / industrial_complex
+				random_list = { 
+					1= {set_building_level={type = industrial_complex level = 8}} 
+					2 = {set_building_level={type = industrial_complex level = 15}} 
+					1 = {set_building_level={type = industrial_complex level = 10}}
+				}
+				
+				#military industry / arms factory
+				random_list = { 
+					1 = {set_building_level={type = arms_factory level = 0}} 
+					2 = {set_building_level={type = arms_factory level = 10}}
+					2 = {set_building_level={type = arms_factory level = 4}}
+				}
+				
+				#randomized manpower
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+				random_list = {
+					45 = {add_manpower = 25000} 
+					25 = {add_manpower = 50000} 
+					15 = {add_manpower = 90000} 
+					12 = {add_manpower = 160000} 
+					3 = {add_manpower = 280000}
+				}
+
 			}
 		}
 
