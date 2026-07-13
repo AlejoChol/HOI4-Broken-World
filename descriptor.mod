@@ -3,5 +3,8 @@ version="1.0"
 tags={
 	"Alternative History"
 }
-supported_version="1.13.6"
+supported_version="1.15.3"
 remote_file_id="2986670696"
+replace_path="events"
+replace_path="common/national_focus"
+replace_path="common/on_actions"
