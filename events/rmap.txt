@@ -322,11 +322,34 @@ country_event = {
 	every_country = {
 		country_event = {id = rmap.2} 
 		
+		#Baseline politics
+		add_popularity ={ideology = democratic popularity = 1}
+
+		#Randomize flavour political landscape
 		random_list = { 
-			1={add_popularity = {ideology = fascism popularity = 0.25} set_politics = { ruling_party = fascism } }
-			1={add_popularity = {ideology = communism popularity = 0.25} set_politics = { ruling_party = communism } }
-			1={add_popularity = {ideology = democratic popularity = 0.25} set_politics = { ruling_party = democratic elections_allowed = yes election_frequency = 48}}
-			1={add_popularity = {ideology = neutrality popularity = 0.25} set_politics = { ruling_party = neutrality }}
+			1={add_popularity = {ideology = fascism popularity = 0.25}}
+			4={add_popularity = {ideology = fascism popularity = 0.1}}
+			2={add_popularity = {ideology = fascism popularity = 0}}
+		}
+
+		random_list = { 
+			1={add_popularity = {ideology = communism popularity = 0.25}}
+			4={add_popularity = {ideology = communism popularity = 0.1}}
+			2={add_popularity = {ideology = communism popularity = 0}}
+		}
+
+		random_list = { 
+			1={add_popularity = {ideology = neutrality popularity = 0.25}}
+			4={add_popularity = {ideology = neutrality popularity = 0.1}}
+			2={add_popularity = {ideology = neutrality popularity = 0}}
+		}
+
+
+		random_list = { 
+			1={add_popularity = {ideology = fascism popularity = 0.50} set_politics = { ruling_party = fascism } }
+			1={add_popularity = {ideology = communism popularity = 0.50} set_politics = { ruling_party = communism } }
+			2={add_popularity = {ideology = democratic popularity = 0.50} set_politics = { ruling_party = democratic elections_allowed = yes election_frequency = 48}}
+			4={add_popularity = {ideology = neutrality popularity = 0.50} set_politics = { ruling_party = neutrality }}
 		}
 		
 		#Necessary as the game doesn't update tag for some reason
@@ -516,7 +539,7 @@ country_event = {
 									set_state_flag = rmap_owned
 									transfer_state_to = PREV.PREV
 									set_temp_variable = {rmap_rstate = THIS}
-									log = "Setting stthate [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
+									log = "Setting state [?rmap_rstate.GetID] as owned by [?rmap_rcountry.GetTag]"
 								}
 							}
 							set_temp_variable = {var=rmap_rcountry value=THIS tooltip=rmap_rcountry}

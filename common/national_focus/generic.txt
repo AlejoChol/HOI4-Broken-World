@@ -1390,8 +1390,7 @@ focus_tree = {
 			}
 			if = { 
 				limit = { has_completed_focus = mechanization_efforts }
-				add_tec
-				h_bonus = {
+				add_tech_bonus = {
 					bonus = 2
 					uses = 2
 					category = motorized_equipment
