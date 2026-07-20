@@ -1,0 +1,130 @@
+ideas = {
+
+	mr_role_of_women = { 
+		law = yes
+
+		stay_at_home = {
+			removal_cost = -1
+			level = 4
+			
+			available = {
+			}
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			cancel_if_invalid = no
+			
+			default = yes
+		}
+		women_workers = {
+			removal_cost = -1
+			level = 3
+			
+			available = {
+				OR = {
+					has_war = yes
+					has_government = communism
+					tag = JAP
+				}
+			}
+			
+			ai_will_do = {
+				factor = 25
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				production_factory_max_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.075
+			}
+			
+			cancel_if_invalid = yes
+		}
+		women_auxillary = {
+			removal_cost = -1
+			level = 3
+			
+			available = {
+				OR = {
+					has_war = yes
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 50
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.15
+				political_power_factor = -0.10
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		limited_female_service = {
+			removal_cost = -1
+			level = 2
+			
+			available = {
+				NOT = { has_idea = disarmed_nation }
+				NOT = { has_idea = volunteer_only }
+				NOT = { has_idea = limited_conscription }
+				AND = {
+					has_war = yes
+					has_war_support > 0.5
+					NOT = { has_government = fascism }
+				}
+			}
+			
+			ai_will_do = {
+				factor = 75
+			}
+
+			modifier = {
+				conscription = 0.02
+				political_power_factor = -0.15
+			}
+			
+			cancel_if_invalid = yes
+		}
+		egalitarian = {
+			removal_cost = -1
+			level = 1
+			
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						has_government = communism
+					}
+					
+					AND = {
+						has_war = yes
+						NOT = { has_government = fascism }
+						enemies_strength_ratio > 1.5
+					}
+				}
+			}
+			
+			ai_will_do = {
+				factor = 10
+			}
+
+			modifier = {
+				conscription = 0.06
+				political_power_factor = -0.20
+				training_time_factor = 0.15
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}
