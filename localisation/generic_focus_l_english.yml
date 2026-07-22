@@ -1,17 +1,17 @@
 ﻿l_english:
 
-railway_cons_1:0 "Nationalized Railway Network"
-railway_cons_2:0 "Expansion of Rail Networks"
-railway_cons_3:0 "New Railway Stations"
+ railway_cons_1:0 "Nationalized Railway Network"
+ railway_cons_2:0 "Expansion of Rail Networks"
+ railway_cons_3:0 "New Railway Stations"
 
-supply_network_1:0 "Mixed Factory Supply Depots"
-supply_network_2:0 "Expanded Supply Network Construction Efforts"
+ supply_network_1:0 "Mixed Factory Supply Depots"
+ supply_network_2:0 "Expanded Supply Network Construction Efforts"
 
-army_exercises_dec:0 "Carry out Army Exercises"
-establish_army_command:0 "Establish Army Command"
-high_command_idea:0 "Armed Forces Command Center"
-army_exercises:0 "Ongoing Army Exercises"
-retire_country_leader:0 "Retire Current Country Leader"
+ army_exercises_dec:0 "Carry out Army Exercises"
+ establish_army_command:0 "Establish Army Command"
+ high_command_idea:0 "Armed Forces Command Center"
+ army_exercises:0 "Ongoing Army Exercises"
+ retire_country_leader:0 "Retire Current Country Leader"
 
  
  ## Army Effort ##
