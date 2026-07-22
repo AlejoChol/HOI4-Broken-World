@@ -9,15 +9,10 @@
 
 ideas = {
 
-
-##    ##    ###    ######## ####  #######  ##    ##    ###    ##           ######  ########  #### ########  #### ########  ######  
-###   ##   ## ##      ##     ##  ##     ## ###   ##   ## ##   ##          ##    ## ##     ##  ##  ##     ##  ##     ##    ##    ## 
-####  ##  ##   ##     ##     ##  ##     ## ####  ##  ##   ##  ##          ##       ##     ##  ##  ##     ##  ##     ##    ##       
-## ## ## ##     ##    ##     ##  ##     ## ## ## ## ##     ## ##           ######  ########   ##  ########   ##     ##     ######  
-##  #### #########    ##     ##  ##     ## ##  #### ######### ##                ## ##         ##  ##   ##    ##     ##          ## 
-##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ## 
-##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######  
-
+#
+# Why must we retain THESE national ideas? 
+# unlike most national ideas that deal with equipment, these ones are directly referenced in equipment definitions. 
+# Unless i go about replacing each equipment definition (thereby making updates to the mod unbearable), this is the best fix
 
 	country = { #DLC
 
