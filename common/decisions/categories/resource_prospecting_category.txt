@@ -1,0 +1,28 @@
+resource_prospecting_category = { # TODO_TA Update for BBA 
+
+	icon = tungsten #TODO_TA set correct gfx
+	
+	allowed = {
+		yes
+	}
+
+	priority = {
+		base = 5
+	}
+
+	on_map_area = {
+		target_array = ROOT.controlled_states
+		name = prospect_states_map_area
+		zoom = 450
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+			}
+		}
+	}
+
+	visible = {
+		yes
+	}
+	visible_when_empty = yes 
+}
