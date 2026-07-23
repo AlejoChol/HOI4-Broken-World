@@ -78,13 +78,13 @@ on_actions = {
 				set_variable={host = SWI.id}
 			}
 			var:host = {				
-				country_event = { id = rmap.0 }
-				country_event = { id = random.1 }
-				country_event = { id = shackles.1 }
-				country_event = { id = inc_res.1 }
-				#country_event = { id = inc_res_prosp.1 }
-				country_event = { id = ett60.1 }
-				country_event = { id = difficultyevent.1 }
+				country_event = { id = rmap_nation_randomizer.0 }
+				country_event = { id = rmap_init_tech_randomizer.1 }
+				country_event = { id = rmap_resources_randomizer.1 }
+				#country_event = { id = rmap_resource_prospecting_randomizer.1 }
+				#country_event = { id = shackles.1 }
+				#country_event = { id = ett60.1 }
+				#country_event = { id = difficultyevent.1 }
 				set_variable = { marked_states = 0 }
 				set_country_flag = host
 			}

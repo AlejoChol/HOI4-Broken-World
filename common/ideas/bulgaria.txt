@@ -20,7 +20,7 @@ ideas = {
 			picture = tfv_can_conscription_crisis
 
 			allowed = {
-				no
+				original_tag = BUL
 			}
 
 		}
@@ -30,7 +30,7 @@ ideas = {
 			picture = tfv_can_conscription_crisis
 
 			allowed = {
-				no
+				original_tag = BUL
 			}
 
 		}
